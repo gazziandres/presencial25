@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>se almaceno el registro</h1>
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th>codigo</th>
+        <th>detalle</th>
+        <th>categoria</th>
+        <th>valor</th>
+        <th>descuento</th>
+        <th>total</th>
+      </tr>
+        <%@sales.each do |sale|%>
+      <tr>
+        <td><%= sale.cod%></td>
+        <td><%= sale.detail%></td>
+        <td><%= sale.category%></td>
+        <td><%= sale.value%></td>
+        <td><%= sale.discount%></td>
+        <td><%= sale.total%></td>
+      </tr>  <%end%>
+    </table>
+  </div>
+  <%= link_to 'volver', sales_new_path%>
+</div>

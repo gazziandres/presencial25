@@ -1,0 +1,33 @@
+<div class="container">
+
+<h1>VENTAS EN RAILS</h1>
+<br>
+<%= form_with model: Sale, class:"form-horizontal", class:"form-horizontal", local: true do |f|%>
+<div class="form-group">
+  <%=f.label "Codigo", class: "col-md-2"%>
+  <%=f.number_field :cod%>
+</div>
+<div class="form-group">
+  <%=f.label "detalle", class: "col-md-2"%>
+  <%=f.text_area :detail%>
+</div>
+<div class="form-group">
+  <%=f.label "categoria", class: "col-md-2"%>
+  <%=f.text_field :category%>
+  </div>
+<div class="form-group">
+  <%=f.label "valor", class: "col-md-2"%>
+  <%=f.number_field :value%>
+</div>
+<div class="form-group">
+  <%=f.label "descuento", class: "col-md-2"%>
+  <%=f.number_field :discount%>
+</div>
+<div class="form-group">
+  <%=f.label "Exento de IVA", class: "col-md-2"%>
+  <%=f.check_box :tax%>
+</div>
+<%=f.submit "Enviar"%>
+<% end %>
+
+</div>
